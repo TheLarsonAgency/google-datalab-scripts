@@ -1,4 +1,4 @@
-# google-datalab-template
+# google-datalab-scripts
 Scripts for working with Google Cloud Datalab
 
 ## Setup
@@ -14,7 +14,7 @@ Use this as a git submodule in the root of your project.
 
 ```bash
 cd project-name
-git submodule add https://github.com/TheLarsonAgency/google-datalab-template.git scripts
+git submodule add https://github.com/TheLarsonAgency/google-datalab-scripts.git scripts
 ```
 
 Any notebooks within the project will be exposed to Datalab.
