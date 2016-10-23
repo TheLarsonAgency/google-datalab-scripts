@@ -8,6 +8,18 @@ Scripts for working with Google Cloud Datalab
 You must have [Docker](https://www.docker.com/) and the [Google Cloud SDK](https://cloud.google.com/sdk/downloads) installed to run the Datalab scripts.
 
 
+### For use in a project
+
+Use this as a git submodule in the root of your project.
+
+```bash
+cd project-name
+git submodule add https://github.com/TheLarsonAgency/google-datalab-template.git
+```
+
+Any notebooks within the project will be exposed to Datalab.
+
+
 ### Configuration
 
 Execute the `setup.sh` script initialize your gcloud installation.  This just executes `gcloud init` for the console, allowing you to initialize or change settings in your environment.
@@ -28,22 +40,24 @@ The exception to these is if you run Datalab and everything in a Docker containe
 ## Scripts
 
 
-### setup.sh (recommended)
+#### setup.sh (recommended)
 
 Execute this script if you need to setup or change your environment configuration for gcloud.
 
+*Note: the other scripts require that you have a configured environment.*
 
-### docker_run_locally.sh
+
+#### docker_run_locally.sh
 
 Launches the Datalab notebooks in a local docker container.
 
 
-### gce_kernel_vm.sh
+#### gce_kernel_vm.sh
 
 Launches the Datalab kernel of the notebooks in a Google Cloud VM while running the interface locally in a Docker container.
 
 
-### gce_run_vm.sh
+#### gce_run_vm.sh
 
 Launches the Datalab system remotely in a Google Cloud VM, then ssh's to it.
 
