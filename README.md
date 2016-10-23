@@ -14,7 +14,7 @@ Use this as a git submodule in the root of your project.
 
 ```bash
 cd project-name
-git submodule add https://github.com/TheLarsonAgency/google-datalab-template.git
+git submodule add https://github.com/TheLarsonAgency/google-datalab-template.git scripts
 ```
 
 Any notebooks within the project will be exposed to Datalab.
@@ -40,26 +40,26 @@ The exception to these is if you run Datalab and everything in a Docker containe
 ## Scripts
 
 
-#### setup.sh (recommended)
+#### scripts/setup.sh (recommended)
 
 Execute this script if you need to setup or change your environment configuration for gcloud.
 
 *Note: the other scripts require that you have a configured environment.*
 
 
-#### docker_run_locally.sh
+#### scripts/docker_run_locally.sh
 
-Launches the Datalab notebooks in a local docker container.
-
-
-#### gce_kernel_vm.sh
-
-Launches the Datalab kernel of the notebooks in a Google Cloud VM while running the interface locally in a Docker container.
+Launches the Datalab notebooks in a local docker container.  *Recommended: run this to execute on a small local dataset.*
 
 
-#### gce_run_vm.sh
+#### scripts/gce_kernel_vm.sh
 
-Launches the Datalab system remotely in a Google Cloud VM, then ssh's to it.
+Launches the Datalab kernel of the notebooks in a Google Cloud VM while running the interface locally in a Docker container.  *Recommended: run this to execute on a large dataset with low algorithmic efficiency (high big-O values).*
+
+
+#### scripts/gce_run_vm.sh
+
+Launches the Datalab system remotely in a Google Cloud VM, then ssh's to it.  *Recommended: run this to execute everything on another machine (ie- you have limited local resources and/or don't have docker installed).*
 
 
 
